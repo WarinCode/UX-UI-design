@@ -15,7 +15,7 @@ import {
 import avatar from "../assets/imgs/avatar.jpeg";
 
 import { JSX } from "react";
-import { ModelTypes } from "../types/types";
+import { ModelTypes } from "../types";
 
 namespace Models {
   export namespace UserData {
@@ -26,7 +26,7 @@ namespace Models {
   export namespace IconStyles {
     export const setDefault: string = "text-slate-50 text-2xl text-center";
   }
-  export const menu1: ModelTypes.MenuList = [
+  export const menu1: ModelTypes.Menu.MenuList = [
     {
       title: "home",
       icon: <AiOutlineHome className={IconStyles.setDefault} />,
@@ -36,12 +36,12 @@ namespace Models {
       icon: <IoFolderOutline className={IconStyles.setDefault} />,
     },
   ];
-  export const menu2: ModelTypes.NestedMenu = {
+  export const menu2: ModelTypes.Menu.DropDownMenu = {
     title: "library",
     icon: <HiOutlineFingerPrint className={IconStyles.setDefault} />,
     list: ["favorites", "most views", "downloads", "history"],
   };
-  export const menu3: ModelTypes.MenuList = [
+  export const menu3: ModelTypes.Menu.MenuList = [
     {
       title: "notifications",
       icon: <IoMdNotificationsOutline className={IconStyles.setDefault} />,
@@ -51,7 +51,7 @@ namespace Models {
       icon: <RiListSettingsLine className={IconStyles.setDefault} />,
     },
   ];
-  export const logout: ModelTypes.EachMenu = {
+  export const logout: ModelTypes.Menu.EachMenuItem = {
     title: "Log out",
     icon: <GrLogout className={IconStyles.setDefault} />,
   };
@@ -73,7 +73,7 @@ namespace Models {
       <MdArrowBackIosNew
         className={
           IconStyles.setDefault.replace("text-2xl", "text-3xl") +
-          " translate-y-[55%]"
+          " translate-y-[59%]"
         }
       />
     );

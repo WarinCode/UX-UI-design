@@ -1,17 +1,16 @@
 import { ReactElement, FC } from "react";
-import AllComponentsProps from "../types/types.tsx";
+import AllComponentsProps from "../types/index.tsx";
 import Models from "../models/models.tsx";
 
 import Profile from "./Profile";
 import Menu from "./Menu";
-import Li from "./Li";
+import MenuItems from "./MenuItems";
 import Line from "./Line";
 import Btn from "./Btn";
 
 const Card: FC<AllComponentsProps.CardProps<HTMLElement>> = (
   props: AllComponentsProps.CardProps<HTMLElement>
 ): ReactElement<HTMLElement> => {
-
   return (
     <section
       {...props}
@@ -27,13 +26,16 @@ const Card: FC<AllComponentsProps.CardProps<HTMLElement>> = (
       />
       <Line />
       <Menu>
-        <Li.T1 data={Models.menu1} />
-        <Li.T3 data={Models.menu2} />
-        <Li.T1 data={Models.menu3} />
+        <MenuItems.T1 data={Models.menu1} />
+        <MenuItems.T3 data={Models.menu2} />
+        <MenuItems.T1 data={Models.menu3} />
       </Menu>
       <Line className="mt-5" />
       <Menu>
-        <Li.T2 data={Models.logout} style={{ textTransform: "initial" }} />
+        <MenuItems.T2
+          data={Models.logout}
+          style={{ textTransform: "initial" }}
+        />
       </Menu>
       <Btn icon={Models.Icons.arrowLeft} className={"btn"} />
     </section>

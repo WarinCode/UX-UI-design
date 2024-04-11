@@ -1,5 +1,5 @@
 import { ReactElement, FC } from "react";
-import AllComponentsProps from "../types/types";
+import AllComponentsProps from "../types";
 
 const Menu: FC<AllComponentsProps.MenuProps<HTMLDivElement>> = (
   props: AllComponentsProps.MenuProps<HTMLDivElement>

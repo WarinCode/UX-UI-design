@@ -1,5 +1,5 @@
 import { FC, ReactElement } from "react";
-import AllComponentsProps from "../types/types";
+import AllComponentsProps from "../types";
 
 const Profile: FC<AllComponentsProps.ProfileProps<string, HTMLDivElement, JSX.Element>> = (
   props: AllComponentsProps.ProfileProps<string, HTMLDivElement, JSX.Element>
@@ -25,6 +25,7 @@ const Profile: FC<AllComponentsProps.ProfileProps<string, HTMLDivElement, JSX.El
           src={userImg}
           alt="user-profile"
           className="w-[50px] h-[50px] rounded-full object-cover"
+          loading="lazy"
         />
         <div className="ml-2 cursor-default text-slate-50">
           <h3 className="font-bold text-lg capitalize">{username}</h3>

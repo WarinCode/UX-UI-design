@@ -1,5 +1,5 @@
 import { ReactElement, FC } from "react";
-import AllComponentsProps from "../types/types";
+import AllComponentsProps from "../types";
 
 const Line: FC<AllComponentsProps.LineProps<HTMLDivElement>> = (
   props: AllComponentsProps.LineProps<HTMLDivElement>

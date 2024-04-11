@@ -20,9 +20,9 @@ namespace AllComponentsProps {
     children: React.ReactNode;
   }
   export interface CardProps<T extends BaseGeneric> extends BaseProps<T> {}
-  export interface LiProps<
+  export interface MenuItemsProps<
     T extends BaseGeneric,
-    D extends ModelTypes.LiType1 | ModelTypes.LiType2 | ModelTypes.LiType3
+    D extends ModelTypes.Menu.MenuItems.Type1 | ModelTypes.Menu.MenuItems.Type2 | ModelTypes.Menu.MenuItems.Type3
   > extends BaseProps<T> {
     data: D;
   }
@@ -30,7 +30,7 @@ namespace AllComponentsProps {
     icon: JSX.Element;
   }
   export interface LineProps<T extends BaseGeneric> extends BaseProps<T> {}
-  export interface EachItemT3<T extends BaseGeneric> extends BaseProps<T>{
+  export interface DropDown<T extends BaseGeneric> extends BaseProps<T>{
     item: string;
     icon: JSX.Element;
     itemClassName?: string;
@@ -41,13 +41,17 @@ namespace AllComponentsProps {
 export default AllComponentsProps;
 
 export namespace ModelTypes {
-  export interface EachMenu {
-    title: string;
-    icon: JSX.Element;
+  export namespace Menu {
+    export interface EachMenuItem {
+      title: string;
+      icon: JSX.Element;
+    }
+    export type DropDownMenu = EachMenuItem & { list: string[] };
+    export type MenuList = EachMenuItem[];
+    export namespace MenuItems {
+      export type Type1 = MenuList;
+      export type Type2 = EachMenuItem;
+      export type Type3 = DropDownMenu;          
+    }
   }
-  export type NestedMenu = EachMenu & { list: string[] };
-  export type MenuList = EachMenu[];
-  export type LiType1 = MenuList;
-  export type LiType2 = EachMenu;
-  export type LiType3 = NestedMenu;
 }

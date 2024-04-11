@@ -4,7 +4,7 @@ import App from "./App.tsx";
 
 import "./style/index.css";
 import "./style/globals.css";
-import '@fontsource-variable/inter';
+import '@fontsource/poppins';
 
 const rootEl: HTMLDivElement = document.querySelector("#root")!;
 const root: Root = createRoot(rootEl);

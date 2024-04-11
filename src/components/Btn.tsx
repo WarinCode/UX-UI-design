@@ -1,5 +1,5 @@
 import { ReactElement, FC } from "react";
-import AllComponentsProps from "../types/types";
+import AllComponentsProps from "../types";
 
 const Btn: FC<AllComponentsProps.BtnProps<HTMLDivElement>> = (
   props: AllComponentsProps.BtnProps<HTMLDivElement>

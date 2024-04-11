@@ -3,7 +3,7 @@
   --line--white-alpha-02: rgba(255, 255, 255, 0.2);
   --line--white-alpha-05: rgba(255, 255, 255, 0.5);
   --line-white-color: rgb(255, 255, 255);
-  --card-shadow: rgb(255, 255, 255);
+  --card-shadow: #161616c9;
   --card-bg: rgba(255, 255, 255, 0.2);
 }
 
@@ -21,7 +21,8 @@ body {
   object-fit: cover;
   width: 100vw;
   height: 100vh;
-  font-family: "Inter Variable", sans-serif;
+  letter-spacing: .3px;
+  font-family: 'Poppins', sans-serif;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -37,7 +38,7 @@ div#root {
   left: 50%;
   transform: translate(-50%, 5%);
   background: var(--card-bg);
-  box-shadow: 0 0 12px #161616c9;
+  box-shadow: 0 0 12px var(--card-shadow);
 }
 
 .line {
