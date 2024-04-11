@@ -1,0 +1,64 @@
+:root {
+  --line-white-alpha-001: rgba(255, 255, 255, 0.01);
+  --line--white-alpha-02: rgba(255, 255, 255, 0.2);
+  --line--white-alpha-05: rgba(255, 255, 255, 0.5);
+  --line-white-color: rgb(255, 255, 255);
+  --card-shadow: rgb(255, 255, 255);
+  --card-bg: rgba(255, 255, 255, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../assets/imgs/bg2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Inter Variable", sans-serif;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+div#root {
+  position: relative;
+}
+
+#cardContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 5%);
+  background: var(--card-bg);
+  box-shadow: 0 0 12px #161616c9;
+}
+
+.line {
+  width: 100%;
+  height: 1.3px;
+  background: linear-gradient(
+    to right,
+    var(--line-white-alpha-001),
+    var(--line--white-alpha-02),
+    var(--line-white-color),
+    var(--line--white-alpha-02),
+    var(--line-white-alpha-001)
+  ) !important;
+}
+
+.straight-line {
+  height: 100%;
+  width: .6px;
+  background: var(--line--white-alpha-05);
+}
+
+.btn {
+  background: var(--line--white-alpha-02);
+}
